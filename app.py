@@ -34,11 +34,9 @@ def translate_to_bengali(text, hf_token):
         return f"❌ Error: {e}"
 
 def explain_text(text, hf_token):
-    # You can replace this with an actual explanation model
-    # Placeholder explanation logic for simplicity
-    API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-base"
+    API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-large"
     headers = {"Authorization": f"Bearer {hf_token}"}
-    prompt = f"Explain this in simple English: {text}"
+    prompt = f"Explain this English sentence in simpler words: {text}"
     payload = {"inputs": prompt}
 
     try:
